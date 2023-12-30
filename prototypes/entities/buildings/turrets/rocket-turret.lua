@@ -185,7 +185,7 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = {
       type = "projectile",
-      ammo_category = "missiles-for-turrets",
+      ammo_category = "rocket",
       cooldown = 120,
       turn_range = 1 / 7,
       projectile_creation_distance = 3.35,

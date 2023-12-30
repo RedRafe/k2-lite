@@ -1,10 +1,5 @@
 data:extend({
-  -- New category for vehicle fuel
-  {
-    type = "fuel-category",
-    name = "vehicle-fuel",
-  },
-  -- Fuel for heavy vehicles like nuclear locomotive
+  -- Fuel for nuclear locomotive
   {
     type = "fuel-category",
     name = "nuclear-fuel",

@@ -29,7 +29,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     fast_replaceable_group = "kr-quarry-drills",
     max_health = 1000,
-    resource_categories = { "kr-quarry" },
+    resource_categories = { "basic-solid" },
     corpse = "kr-big-random-pipes-remnant",
     dying_explosion = "big-explosion",
     resistances = {
@@ -49,7 +49,7 @@ data:extend({
     energy_usage = "2.5MW",
     mining_speed = 10,
     mining_power = 3,
-    resource_searching_radius = 0.49,
+    resource_searching_radius = 12,
     vector_to_place_result = { 0, -3.65 },
     radius_visualisation_picture = {
       filename = "__base__/graphics/entity/electric-mining-drill/electric-mining-drill-radius-visualization.png",

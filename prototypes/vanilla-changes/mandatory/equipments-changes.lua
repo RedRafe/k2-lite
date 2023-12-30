@@ -111,40 +111,9 @@ addRadioactiveResistance("power-armor", 3, 30)
 addRadioactiveResistance("power-armor-mk2", 4, 45)
 
 -- Armors:
-table.insert(data.raw["equipment-grid"]["small-equipment-grid"].equipment_categories, "universal-equipment")
 table.insert(data.raw["equipment-grid"]["small-equipment-grid"].equipment_categories, "robot-interaction-equipment")
-table.insert(data.raw["equipment-grid"]["medium-equipment-grid"].equipment_categories, "universal-equipment")
 table.insert(data.raw["equipment-grid"]["medium-equipment-grid"].equipment_categories, "robot-interaction-equipment")
-table.insert(data.raw["equipment-grid"]["large-equipment-grid"].equipment_categories, "universal-equipment")
 table.insert(data.raw["equipment-grid"]["large-equipment-grid"].equipment_categories, "robot-interaction-equipment")
-
--- Armor grids rebalance
-data.raw["equipment-grid"]["small-equipment-grid"].width = 4
-data.raw["equipment-grid"]["small-equipment-grid"].height = 4
-
-data.raw["equipment-grid"]["medium-equipment-grid"].width = 6
-data.raw["equipment-grid"]["medium-equipment-grid"].height = 6
-
-data.raw["equipment-grid"]["large-equipment-grid"].width = 8
-data.raw["equipment-grid"]["large-equipment-grid"].height = 8
-
--- -- Vanilla armors recipes changing
-
--- Heavy armor
-krastorio.recipes.addOrReplaceIngredient("heavy-armor", "light-armor", { "light-armor", 1 })
-krastorio.recipes.removeIngredient("heavy-armor", "copper-plate")
-
--- Modular armor
-krastorio.recipes.addOrReplaceIngredient("modular-armor", "heavy-armor", { "heavy-armor", 1 })
-krastorio.recipes.removeIngredient("modular-armor", "steel-plate")
-
--- Power armor (MK1)
-krastorio.recipes.addOrReplaceIngredient("power-armor", "modular-armor", { "modular-armor", 1 })
-krastorio.recipes.removeIngredient("power-armor", "steel-plate")
-
--- Power armor MK2
-krastorio.recipes.addOrReplaceIngredient("power-armor-mk2", "power-armor", { "power-armor", 1 })
-krastorio.recipes.removeIngredient("power-armor-mk2", "processing-unit")
 
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
@@ -161,7 +130,7 @@ data:extend({
     width = 6,
     height = 6,
     equipment_categories = {
-      "universal-equipment",
+      "armor",
       "robot-interaction-equipment",
       "vehicle-robot-interaction-equipment",
       "vehicle-equipment",
@@ -176,7 +145,7 @@ data:extend({
     width = 6,
     height = 11,
     equipment_categories = {
-      "universal-equipment",
+      "armor",
       "robot-interaction-equipment",
       "vehicle-robot-interaction-equipment",
       "vehicle-equipment",
@@ -189,7 +158,7 @@ data:extend({
     width = 12,
     height = 15,
     equipment_categories = {
-      "universal-equipment",
+      "armor",
       "robot-interaction-equipment",
       "vehicle-robot-interaction-equipment",
       "vehicle-equipment",
@@ -203,7 +172,11 @@ data:extend({
     name = "kr-locomotive-grid",
     width = 12,
     height = 12,
-    equipment_categories = { "universal-equipment", "vehicle-equipment", "vehicle-motor" },
+    equipment_categories = {
+      "armor",
+      "vehicle-equipment",
+      "vehicle-motor"
+    },
   },
   {
     type = "equipment-grid",
@@ -211,7 +184,7 @@ data:extend({
     width = 6,
     height = 16,
     equipment_categories = {
-      "universal-equipment",
+      "armor",
       "vehicle-equipment",
       "robot-interaction-equipment",
       "vehicle-robot-interaction-equipment",
@@ -225,7 +198,7 @@ data:extend({
     width = 10,
     height = 6,
     equipment_categories = {
-      "universal-equipment",
+      "armor",
       "robot-interaction-equipment",
       "vehicle-robot-interaction-equipment",
       "vehicle-equipment",
@@ -233,10 +206,6 @@ data:extend({
     },
   },
 })
-
-if krastorio.general.getSafeSettingValue("kr-spidertron-exoskeleton") then
-  table.insert(data.raw["equipment-grid"]["kr-spidertron-equipment-grid"].equipment_categories, "spidertron-only")
-end
 
 -- -- General vehicles grids compatibility, modify grid and integrate it
 applyAndIntegrateEquipmentCategories("car", "car", "kr-car-grid")
@@ -277,7 +246,7 @@ updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_
 if data.raw["roboport-equipment"]["personal-roboport-equipment"] then
   data.raw["roboport-equipment"]["personal-roboport-equipment"].robot_limit = 20
   data.raw["roboport-equipment"]["personal-roboport-equipment"].construction_radius = 15
-  data.raw["roboport-equipment"]["personal-roboport-equipment"].categories = { "robot-interaction-equipment" }
+  data.raw["roboport-equipment"]["personal-roboport-equipment"].categories = { "armor" }
 end
 
 if data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"] then
@@ -289,18 +258,8 @@ if data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"] then
     usage_priority = "secondary-input",
   }
   data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].charging_energy = "2000kW"
-  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].categories = { "robot-interaction-equipment" }
+  data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].categories = { "armor" }
 end
-
--- Personal roboport equipment (recipe)
-krastorio.recipes.addIngredient("personal-roboport-equipment", { "steel-plate", 10 })
-krastorio.recipes.replaceIngredient("personal-roboport-equipment", "battery", { "battery", 45 })
-krastorio.recipes.replaceIngredient("personal-roboport-equipment", "advanced-circuit", { "advanced-circuit", 5 })
-krastorio.recipes.replaceIngredient("personal-roboport-equipment", "iron-gear-wheel", { "iron-gear-wheel", 20 })
-krastorio.recipes.removeIngredient("personal-roboport-equipment", "steel-plate")
-
--- Personal roboport mk2 equipment (recipe)
-krastorio.recipes.replaceIngredient("personal-roboport-mk2-equipment", "processing-unit", { "processing-unit", 20 })
 
 -----------------------------------------------------------------------------------------------------------------
 -- -- Batteries
@@ -360,10 +319,6 @@ end
 -- iterating...
 updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_path, kr_universal_equipments_path)
 
--- Equipments categories
-table.insert(data.raw["battery-equipment"]["battery-equipment"].categories, "universal-equipment")
-table.insert(data.raw["battery-equipment"]["battery-mk2-equipment"].categories, "universal-equipment")
-
 -- -- Statistic Modification
 -- Energies
 data.raw["battery-equipment"]["battery-equipment"].energy_source = {
@@ -381,17 +336,6 @@ data.raw["battery-equipment"]["battery-mk2-equipment"].energy_source = {
   usage_priority = "tertiary",
 }
 
--- Recipe
-krastorio.recipes.overrideIngredients("battery-equipment", {
-  { "battery", 2 },
-  { "iron-plate", 2 },
-  { "electronic-circuit", 1 },
-})
-krastorio.recipes.overrideIngredients("battery-mk2-equipment", {
-  { "battery-equipment", 2 },
-  { "steel-plate", 2 },
-  { "advanced-circuit", 1 },
-})
 
 -- subgroup
 data.raw.item["battery-equipment"].order = "b1[battery]-b1[battery-equipment]"
@@ -403,8 +347,6 @@ data.raw.item["battery-mk2-equipment"].subgroup = "equipment"
 -- -- Discharge defense
 -----------------------------------------------------------------------------------------------------------------
 
--- Equipments categories
-table.insert(data.raw["active-defense-equipment"]["discharge-defense-equipment"].categories, "universal-equipment")
 -- Order
 data.raw["active-defense-equipment"]["discharge-defense-equipment"].order =
   "f[active-defense-equipment]-a[discharge-defense-equipment]"
@@ -453,16 +395,6 @@ krastorio.icons.setTechnologyIcons("fusion-reactor-equipment", {
   { icon = kr_technologies_icons_path .. "overlays/equipment-overlay.png", icon_size = 256, icon_mipmaps = 4 },
 }, 256, 4)
 
--- Equipments categories
-table.insert(data.raw["generator-equipment"]["fusion-reactor-equipment"].categories, "universal-equipment")
-
-data.raw["generator-equipment"]["fusion-reactor-equipment"].burner = {
-  fuel_category = "fusion-fuel",
-  effectivity = 2,
-  fuel_inventory_size = 1,
-  burnt_inventory_size = 1,
-}
-
 -- -- Energy generated by equipment:
 -- Equipment energy generated is balanced on this formula:
 -- power = 50kW * grid_cells_occupied * tier_multiplier * big_version_multiplier
@@ -483,8 +415,6 @@ data.raw["roboport-equipment"]["personal-roboport-equipment"].construction_radiu
 -----------------------------------------------------------------------------------------------------------------
 
 -- Equipments categories
-table.insert(data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].categories, "universal-equipment")
-
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].energy_source.buffer_capacity = "18MJ"
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].energy_source.input_flow_limit = "2MW"
 data.raw["active-defense-equipment"]["personal-laser-defense-equipment"].attack_parameters = {
@@ -550,10 +480,6 @@ objects_to_modify = {
 -- iterating...
 updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_path, kr_universal_equipments_path)
 
--- Equipments categories
-table.insert(data.raw["energy-shield-equipment"]["energy-shield-equipment"].categories, "universal-equipment")
-table.insert(data.raw["energy-shield-equipment"]["energy-shield-mk2-equipment"].categories, "universal-equipment")
-
 -- Localized names
 data.raw.item["energy-shield-equipment"].localised_name = { "equipment-name.shield-generator-mk1" }
 data.raw.item["energy-shield-equipment"].localised_description = { "equipment-description.shield-generator-mk1" }
@@ -593,22 +519,9 @@ objects_to_modify = {
 -- iterating...
 updateVanillaEquipmentGraphics(objects_to_modify, kr_universal_equipments_icons_path, kr_universal_equipments_path)
 
--- Equipments categories
-table.insert(data.raw["solar-panel-equipment"]["solar-panel-equipment"].categories, "universal-equipment")
-
 data.raw["solar-panel-equipment"]["solar-panel-equipment"].power = "40kW" -- 40kW * 1  * 1 * 1
 data.raw.item["solar-panel-equipment"].order = "a[energy-source]-a1[solar-panel]"
 data.raw.item["solar-panel-equipment"].subgroup = "equipment"
-
-krastorio.recipes.addIngredient("solar-panel-equipment", { name = "glass", amount = 5 })
-krastorio.recipes.removeIngredient("solar-panel", { name = "glass", amount = 5 })
-
------------------------------------------------------------------------------------------------------------------
--- -- Belt Immunity
------------------------------------------------------------------------------------------------------------------
-
--- Equipments categories
-table.insert(data.raw["belt-immunity-equipment"]["belt-immunity-equipment"].categories, "universal-equipment")
 
 -----------------------------------------------------------------------------------------------------------------
 -- Night visor
@@ -648,13 +561,6 @@ data.raw["night-vision-equipment"]["night-vision-equipment"].shape = {
   type = "full",
 }
 
-krastorio.recipes.overrideIngredients("night-vision-equipment", {
-  { "advanced-circuit", 2 },
-  { "iron-plate", 1 },
-  { "plastic-bar", 1 },
-  { "glass", 1 },
-})
-
 data.raw.item["night-vision-equipment"].subgroup = "character-equipment"
 data.raw.item["night-vision-equipment"].order = "f[night-vision]-a1[night-vision-equipment]"
 
@@ -663,7 +569,6 @@ data.raw.item["night-vision-equipment"].order = "f[night-vision]-a1[night-vision
 -----------------------------------------------------------------------------------------------------------------
 
 data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].movement_bonus = 0.2
-data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = { "armor", "spidertron-only" }
 
 -- -- Items visual(icon, sprites)/modifcation
 objects_to_modify = {

@@ -270,8 +270,16 @@ data:extend({
       usage_priority = "secondary-input",
     },
     energy_usage = "250kW",
-    researching_speed = 1,
-    inputs = {},
+    researching_speed = 1.5,
+    inputs = {
+      "automation-science-pack",
+      "logistic-science-pack",
+      "military-science-pack",
+      "chemical-science-pack",
+      "production-science-pack",
+      "utility-science-pack",
+      "space-science-pack"
+    },
     module_specification = {
       module_slots = 2,
       module_info_icon_shift = { 0, 0.9 },

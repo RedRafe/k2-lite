@@ -9,14 +9,14 @@ data:extend({
     name = "mk3-armor-grid",
     width = 10,
     height = 10,
-    equipment_categories = { "armor", "universal-equipment", "robot-interaction-equipment" },
+    equipment_categories = { "armor", "robot-interaction-equipment" },
   },
   {
     type = "equipment-grid",
     name = "mk4-armor-grid",
     width = 12,
     height = 12,
-    equipment_categories = { "armor", "universal-equipment", "robot-interaction-equipment" },
+    equipment_categories = { "armor",  "robot-interaction-equipment" },
   },
 })
 
@@ -128,7 +128,7 @@ data:extend({
   {
     type = "movement-bonus-equipment",
     name = "advanced-exoskeleton-equipment",
-    categories = { "armor", "spidertron-only" },
+    categories = { "armor" },
     energy_consumption = "300kW",
     energy_source = {
       type = "electric",
@@ -158,7 +158,7 @@ data:extend({
   {
     type = "movement-bonus-equipment",
     name = "superior-exoskeleton-equipment",
-    categories = { "armor", "spidertron-only" },
+    categories = { "armor" },
     energy_consumption = "400kW",
     energy_source = {
       type = "electric",

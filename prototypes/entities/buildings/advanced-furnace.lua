@@ -374,7 +374,7 @@ data:extend({
         },
       },
     },
-    crafting_categories = { "smelting", "advanced-smelting" },
+    crafting_categories = { "smelting" },
     scale_entity_info_icon = kr_icons_size,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = advanced_furnace_sound,

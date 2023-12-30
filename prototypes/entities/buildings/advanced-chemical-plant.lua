@@ -131,7 +131,7 @@ data:extend({
         },
       },
     },
-    crafting_categories = { "chemistry" },
+    crafting_categories = { "chemistry", "oil-processing" },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = { filename = kr_buildings_sounds_path .. "advanced-chemical-plant.ogg", volume = 0.5 },

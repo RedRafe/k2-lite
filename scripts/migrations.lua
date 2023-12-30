@@ -19,11 +19,8 @@ local virus = require("scripts.virus")
 local migrations = {}
 
 function migrations.generic()
-  freeplay.add_bonus_items()
-  freeplay.add_to_crash_site()
   freeplay.add_starting_items()
   freeplay.set_custom_intro()
-  freeplay.disable_rocket_victory()
   util.ensure_turret_force()
 
   energy_absorber.init()
@@ -35,7 +32,6 @@ function migrations.generic()
   tesla_coil.get_absorber_buffer_capacity()
 
   compatibility.aai_industry()
-  compatibility.disco_science()
   compatibility.nuclear_fuel()
   compatibility.schall_uranium()
 

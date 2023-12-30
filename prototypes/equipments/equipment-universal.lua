@@ -39,7 +39,7 @@ data:extend({
       output_flow_limit = "2MW",
       usage_priority = "tertiary",
     },
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   -- big-battery-equipment
   {
@@ -70,7 +70,7 @@ data:extend({
       output_flow_limit = "1MW",
       usage_priority = "tertiary",
     },
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   -- big-battery-mk2-equipment
   {
@@ -101,7 +101,7 @@ data:extend({
       output_flow_limit = "2MW",
       usage_priority = "tertiary",
     },
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   -- big-battery-mk3-equipment
   {
@@ -132,100 +132,10 @@ data:extend({
       output_flow_limit = "4MW",
       usage_priority = "tertiary",
     },
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   ----------------------------------------------------------------------------------------------------
   -- -- GENERATORS
-  -- small-portable-generator-equipment
-  {
-    type = "generator-equipment",
-    name = "small-portable-generator",
-    sprite = {
-      filename = kr_universal_equipments_path .. "small-portable-generator.png",
-      width = 64,
-      height = 64,
-      priority = "medium",
-      hr_version = {
-        filename = kr_universal_equipments_path .. "hr-small-portable-generator.png",
-        width = 128,
-        height = 128,
-        priority = "medium",
-        scale = 0.5,
-      },
-    },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    burner = {
-      fuel_categories = { "chemical", "vehicle-fuel" },
-      effectivity = 2,
-      fuel_inventory_size = 2,
-      burnt_inventory_size = 1,
-      smoke = {
-        {
-          name = "smoke",
-          deviation = { -0.25, -0.25 },
-          frequency = 1,
-          position = { 0, 0.5 },
-          height = 1.25,
-          starting_frame_deviation = 60,
-        },
-      },
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "primary-output",
-    },
-    power = "200kW", -- 50kW * 4  * 1 * 1
-    categories = { "universal-equipment" },
-  },
-  -- portable-generator
-  {
-    type = "generator-equipment",
-    name = "portable-generator",
-    sprite = {
-      filename = kr_universal_equipments_path .. "portable-generator.png",
-      width = 128,
-      height = 128,
-      priority = "medium",
-      hr_version = {
-        filename = kr_universal_equipments_path .. "hr-portable-generator.png",
-        width = 256,
-        height = 256,
-        priority = "medium",
-        scale = 0.5,
-      },
-    },
-    shape = {
-      width = 3,
-      height = 3,
-      type = "full",
-    },
-    burner = {
-      fuel_categories = { "chemical", "vehicle-fuel" },
-      effectivity = 2,
-      fuel_inventory_size = 2,
-      burnt_inventory_size = 1,
-      smoke = {
-        {
-          name = "smoke",
-          deviation = { -0.25, -0.25 },
-          frequency = 1,
-          position = { 0, 0.5 },
-          height = 1.25,
-          starting_frame_deviation = 60,
-        },
-      },
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "primary-output",
-    },
-    power = "540kW", -- 50kW * 9  * 1 * 1.2
-    categories = { "universal-equipment" },
-  },
   -- nuclear-reactor-equipment
   {
     type = "generator-equipment",
@@ -248,18 +158,12 @@ data:extend({
       height = 4,
       type = "full",
     },
-    burner = {
-      fuel_category = "nuclear",
-      effectivity = 2,
-      fuel_inventory_size = 1,
-      burnt_inventory_size = 1,
-    },
     energy_source = {
       type = "electric",
       usage_priority = "primary-output",
     },
     power = "2.4MW", -- 50kW * 16 * 3 * 1
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   -- antimatter-reactor-equipment
   {
@@ -283,18 +187,12 @@ data:extend({
       height = 4,
       type = "full",
     },
-    burner = {
-      fuel_category = "antimatter-fuel",
-      effectivity = 2,
-      fuel_inventory_size = 1,
-      burnt_inventory_size = 1,
-    },
     energy_source = {
       type = "electric",
       usage_priority = "primary-output",
     },
     power = "4.0MW", -- 50kW * 16 * 5 * 1
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   -- cyber-potato-equipment
   {
@@ -323,7 +221,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "5.0MW", -- 50kW * 16 * 5 * 1
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   -- energy absorber
   {
@@ -358,7 +256,7 @@ data:extend({
       ) .. "W",
       usage_priority = "primary-output",
     },
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   ----------------------------------------------------------------------------------------------------
   -- SOLAR PANELS (GENERATORS)
@@ -389,7 +287,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "192kW", -- 40kW * 4  * 1 * 1.2
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   -- imersite-solar-panel-equipment
   {
@@ -418,7 +316,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "80kW", -- 40kW * 1  * 2 * 1
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   -- big-imersite-solar-panel-equipment
   {
@@ -447,7 +345,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "384kW", -- 40kW * 4  * 2 * 1.2
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   ----------------------------------------------------------------------------------------------------
   -- PERSONAL DEFENCES
@@ -490,7 +388,7 @@ data:extend({
       },
     },
     automatic = true,
-    categories = { "universal-equipment" },
+    categories = { "armor" },
     energy_source = {
       buffer_capacity = "24MJ",
       input_flow_limit = "3MW",
@@ -555,7 +453,7 @@ data:extend({
       },
     },
     automatic = true,
-    categories = { "universal-equipment" },
+    categories = { "armor" },
     energy_source = {
       buffer_capacity = "36MJ",
       input_flow_limit = "6MW",
@@ -620,7 +518,7 @@ data:extend({
       },
     },
     automatic = true,
-    categories = { "universal-equipment" },
+    categories = { "armor" },
     energy_source = {
       buffer_capacity = "50MJ",
       input_flow_limit = "10MW",
@@ -646,257 +544,7 @@ data:extend({
       },
     },
   },
-  -- personal-submachine-laser-defense-mk1-equipment
-  {
-    type = "active-defense-equipment",
-    name = "personal-submachine-laser-defense-mk1-equipment",
-    sprite = {
-      filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk1-equipment.png",
-      width = 64,
-      height = 64,
-      priority = "medium",
-      hr_version = {
-        filename = kr_universal_equipments_path .. "hr-personal-submachine-laser-defense-mk1-equipment.png",
-        width = 128,
-        height = 128,
-        priority = "medium",
-        scale = 0.5,
-      },
-    },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      buffer_capacity = "20MJ",
-      input_flow_limit = "2MW",
-    },
-    attack_parameters = {
-      type = "beam",
-      damage_modifier = 1.5,
-      cooldown = 6,
-      range = 15,
-      projectile_center = { 0, 0.25 },
-      projectile_creation_distance = 0.5,
-      sound = {
-        filename = "__base__/sound/fight/pulse.ogg",
-        volume = 0.3,
-      },
-      ammo_type = {
-        category = "laser",
-        energy_consumption = "0.2MJ",
-        action = {
-          type = "direct",
-          action_delivery = {
-            {
-              type = "instant",
-              target_effects = {
-                {
-                  type = "create-entity",
-                  entity_name = "explosion-hit",
-                },
-              },
-            },
-            {
-              type = "beam",
-              beam = "laser-beam",
-              max_length = 16,
-              duration = 3,
-              source_offset = { 0, -1.31439 },
-            },
-          },
-        },
-      },
-    },
-    automatic = true,
-    categories = { "universal-equipment" },
-  },
-  -- personal-submachine-laser-defense-mk2-equipment
-  {
-    type = "active-defense-equipment",
-    name = "personal-submachine-laser-defense-mk2-equipment",
-    sprite = {
-      filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk2-equipment.png",
-      width = 64,
-      height = 64,
-      priority = "medium",
-      hr_version = {
-        filename = kr_universal_equipments_path .. "hr-personal-submachine-laser-defense-mk2-equipment.png",
-        width = 128,
-        height = 128,
-        priority = "medium",
-        scale = 0.5,
-      },
-    },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      buffer_capacity = "40MJ",
-      input_flow_limit = "4MW",
-    },
-    attack_parameters = {
-      type = "beam",
-      damage_modifier = 2,
-      cooldown = 6,
-      range = 18,
-      projectile_center = { 0, 0.25 },
-      projectile_creation_distance = 0.5,
-      ammo_type = {
-        category = "laser",
-        energy_consumption = "0.35MJ",
-        action = {
-          type = "direct",
-          action_delivery = {
-            {
-              type = "instant",
-              target_effects = {
-                {
-                  type = "create-entity",
-                  entity_name = "explosion-hit",
-                },
-              },
-            },
-            {
-              type = "beam",
-              beam = "laser-beam",
-              max_length = 29,
-              duration = 3,
-              source_offset = { 0, -1.31439 },
-            },
-          },
-        },
-      },
-    },
-    automatic = true,
-    categories = { "universal-equipment" },
-  },
-  -- personal-submachine-laser-defense-mk3-equipment
-  {
-    type = "active-defense-equipment",
-    name = "personal-submachine-laser-defense-mk3-equipment",
-    sprite = {
-      filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk3-equipment.png",
-      width = 64,
-      height = 64,
-      priority = "medium",
-      hr_version = {
-        filename = kr_universal_equipments_path .. "hr-personal-submachine-laser-defense-mk3-equipment.png",
-        width = 128,
-        height = 128,
-        priority = "medium",
-        scale = 0.5,
-      },
-    },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      buffer_capacity = "60MJ",
-      input_flow_limit = "6MW",
-    },
-    attack_parameters = {
-      type = "beam",
-      damage_modifier = 3,
-      cooldown = 6,
-      range = 20,
-      projectile_center = { 0, 0.25 },
-      projectile_creation_distance = 0.5,
-      ammo_type = {
-        category = "laser",
-        energy_consumption = "0.5MJ",
-        action = {
-          type = "direct",
-          action_delivery = {
-            {
-              type = "instant",
-              target_effects = {
-                {
-                  type = "create-entity",
-                  entity_name = "explosion-hit",
-                },
-              },
-            },
-            {
-              type = "beam",
-              beam = "laser-beam",
-              max_length = 21,
-              duration = 3,
-              source_offset = { 0, -1.31439 },
-            },
-          },
-        },
-      },
-    },
-    automatic = true,
-    categories = { "universal-equipment" },
-  },
-  -- personal-submachine-laser-defense-mk4-equipment
-  {
-    type = "active-defense-equipment",
-    name = "personal-submachine-laser-defense-mk4-equipment",
-    sprite = {
-      filename = kr_universal_equipments_path .. "personal-submachine-laser-defense-mk4-equipment.png",
-      width = 64,
-      height = 64,
-      priority = "medium",
-      hr_version = {
-        filename = kr_universal_equipments_path .. "hr-personal-submachine-laser-defense-mk4-equipment.png",
-        width = 128,
-        height = 128,
-        priority = "medium",
-        scale = 0.5,
-      },
-    },
-    shape = {
-      width = 2,
-      height = 2,
-      type = "full",
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-input",
-      buffer_capacity = "75MJ",
-      input_flow_limit = "7.5MW",
-    },
-    attack_parameters = {
-      type = "beam",
-      damage_modifier = 6,
-      cooldown = 6,
-      range = 22,
-      projectile_center = { 0, 0.25 },
-      projectile_creation_distance = 0.5,
-      ammo_type = {
-        category = "laser",
-        energy_consumption = "0.75MJ",
-        action = {
-          type = "direct",
-          action_delivery = {
-            {
-              type = "beam",
-              beam = "laser-beam",
-              max_length = 23,
-              duration = 3,
-              source_offset = { 0, -1.31439 },
-            },
-          },
-        },
-      },
-    },
-    automatic = true,
-    categories = { "universal-equipment" },
-  },
+
   ----------------------------------------------------------------------------------------------------
   -- SHIELDS
   -- shield mk3
@@ -931,7 +579,7 @@ data:extend({
       input_flow_limit = "540kW",
       usage_priority = "primary-input",
     },
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
   -- shield mk4
   {
@@ -965,6 +613,6 @@ data:extend({
       input_flow_limit = "810kW",
       usage_priority = "primary-input",
     },
-    categories = { "universal-equipment" },
+    categories = { "armor" },
   },
 })

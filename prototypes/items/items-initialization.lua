@@ -9,12 +9,6 @@ require(kr_items_prototypes_path .. "equipments")
 -- Loader (optional items)
 require(kr_items_prototypes_path .. "loaders")
 
--- -- Raw materials/Resources
-require(kr_items_prototypes_path .. "resources")
-
--- -- New science packs graphic
-require(kr_items_prototypes_path .. "techcards")
-
 -- -- Items for terrain
 require(kr_items_prototypes_path .. "terrain")
 
@@ -35,5 +29,3 @@ require(kr_items_prototypes_path .. "uncategorized")
 require(kr_items_prototypes_path .. "guns")
 -- Adavanced tank guns
 require(kr_items_prototypes_path .. "adavanced-tank-guns")
--- Ammos
-require(kr_items_prototypes_path .. "ammo")

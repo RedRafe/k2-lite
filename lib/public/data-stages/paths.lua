@@ -3,7 +3,7 @@
 -----------------------------------------------------------------------------------------------------------------
 -- -- GENERIC PATHS
 -----------------------------------------------------------------------------------------------------------------
-kr_path = "__Krastorio2__/"
+kr_path = "__k2-lite__/"
 kr_prototypes_path = kr_path .. "prototypes/"
 -- Prototypes:
 kr_achievements_path = kr_prototypes_path .. "achievements/"

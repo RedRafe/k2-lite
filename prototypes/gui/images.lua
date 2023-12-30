@@ -52,13 +52,6 @@ data:extend({
     height = 244,
   },
   ---
-  {
-    type = "sprite",
-    name = "kr-fuels-preview",
-    filename = kr_graphic_mod_path .. "gui/previews/fuels-preview.png",
-    width = 274,
-    height = 117,
-  },
   -- New gun play
   ---
   {
@@ -119,13 +112,6 @@ data:extend({
     filename = kr_graphic_mod_path .. "gui/previews/shelter-preview.png",
     width = 408,
     height = 265,
-  },
-  {
-    type = "sprite",
-    name = "kr-crusher-preview",
-    filename = kr_graphic_mod_path .. "gui/previews/crusher-preview.png",
-    width = 232,
-    height = 236,
   },
   {
     type = "sprite",

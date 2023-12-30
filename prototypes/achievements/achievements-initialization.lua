@@ -39,44 +39,6 @@ data:extend({
     amount = 1000000,
   },
   {
-    type = "produce-achievement",
-    name = "10000-ai-core",
-    icons = {
-      { icon = kr_achievements_icons_path .. "backgrounds/gold.png", icon_size = 128 },
-      { icon = kr_achievements_icons_path .. "ai-core.png", icon_size = 128 },
-    },
-    icon_size = 128,
-    order = "kr-p-a1",
-    limited_to_one_game = false,
-    item_product = "ai-core",
-    amount = 10000,
-  },
-  {
-    type = "research-achievement",
-    name = "destroyer-of-worlds",
-    icons = {
-      { icon = kr_achievements_icons_path .. "backgrounds/epic.png", icon_size = 128 },
-      { icon = kr_achievements_icons_path .. "destroyer-of-worlds.png", icon_size = 128 },
-    },
-    icon_size = 128,
-    limited_to_one_game = false,
-    order = "kr-p-m4",
-    technology = "kr-antimatter-ammo",
-  },
-  {
-    type = "build-entity-achievement",
-    name = "dig-into-deep",
-    icons = {
-      { icon = kr_achievements_icons_path .. "backgrounds/normal.png", icon_size = 128 },
-      { icon = kr_achievements_icons_path .. "dig-into-deep.png", icon_size = 128 },
-    },
-    icon_size = 128,
-    order = "kr-b-1",
-    limited_to_one_game = false,
-    to_build = "kr-quarry-drill",
-    amount = 1,
-  },
-  {
     type = "build-entity-achievement",
     name = "death-on-wheels",
     icons = {

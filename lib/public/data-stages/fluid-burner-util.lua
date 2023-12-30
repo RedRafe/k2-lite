@@ -1,5 +1,5 @@
-local color = require("__Krastorio2__/lib/private/data-stages/colorRGB")
-local matrix = require("__Krastorio2__/lib/private/data-stages/matrix")
+local color = require(kr_path .. "lib/private/data-stages/colorRGB")
+local matrix = require(kr_path .. "lib/private/data-stages/matrix")
 
 -- -- -- FLUID BURNER UTIL
 -- Notes: in fluid burner for don't handle a fluid must be blacklisted
@@ -24,7 +24,6 @@ end
 -- Products of burn recipes (singleton table)
 if not krastorio.fluid_burner_util.fluid_products then
   krastorio.fluid_burner_util.fluid_products = {
-    ["dirty-water"] = { { type = "item", name = "stone", amount = 1, probability = 0.30 } },
   }
 end
 
@@ -39,10 +38,7 @@ if not krastorio.fluid_burner_util.fluid_emissions_multiplier then
     ["oxygen"] = 0.0,
     ["steam"] = 0.0,
     ["water"] = 0.0,
-    ["dirty-water"] = 6.0,
-    ["chlorine"] = 2.0,
     ["hydrogen"] = 0.0,
-    ["hydrogen-chloride"] = 2.0,
     ["ammonia"] = 4.0,
     ["nitrogen"] = 0.0,
   }
@@ -160,7 +156,7 @@ function krastorio.fluid_burner_util.generateBurnFluidsRecipe(fluid_name)
         },
         energy_required = 2,
         enabled = false,
-        hidden = true,
+        hidden = false,
         hide_from_player_crafting = true,
         always_show_products = false,
         show_amount_in_title = false,

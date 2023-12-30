@@ -3,12 +3,12 @@
 ---------------------------------------------------------------------------
 -- -- General Info
 krastorio = {}
-krastorio.internal_name = "Krastorio2"
-krastorio.title_name = "Krastorio 2"
+krastorio.internal_name = "k2-lite"
+krastorio.title_name = "Krastorio 2 Lite"
 krastorio.version = mods[krastorio.internal_name]
 krastorio.stage = "data"
 -- -- Global Krastorio 2 Paths
-require("__Krastorio2__/lib/public/data-stages/paths")
+require("__k2-lite__/lib/public/data-stages/paths")
 -- -- Global Krastorio 2 library initialization, utilities library (support for main library)
 require(kr_path .. "lib/private/data-stages/utils/krastorio_utils")
 -- -- Global Krastorio 2 library initialization, Krastorio 2 main library
@@ -28,7 +28,7 @@ krastorio.optimization_tech_card_name = "space-science-pack"
 -- -- Define Compatibility Script Path
 local scripts_path = "compatibility-scripts/data/"
 -- -- Pre-Init Compat for SE
-require(scripts_path .. "space-exploration-pre-init")
+--require(scripts_path .. "space-exploration-pre-init")
 
 ---------------------------------------------------------------------------
 -- -- -- CONTENTS INITIALIZATION (data stage)
@@ -55,8 +55,6 @@ require(kr_items_prototypes_path .. "items-initialization")
 require(kr_particles_prototypes_path .. "particles-initialization")
 -- -- Adding new recipes
 require(kr_recipes_prototypes_path .. "recipes-initialization")
--- -- Adding new resources
-require(kr_resources_path .. "resources-initialization")
 -- -- Adding new sounds (prototypes)
 require(kr_prototypes_path .. "sounds/sounds")
 -- -- Adding new technologies
@@ -77,9 +75,9 @@ require(kr_others_prototypes_path .. "shortcut")
 -- -- -- COMPATIBILITY INITIALIZATION (data stage)
 ---------------------------------------------------------------------------
 -- -- Execute Compatilbility Scripts for the data stage
-require(scripts_path .. "aircraft")
-require(scripts_path .. "early-electric-furnaces")
-require(scripts_path .. "deadlock-beltboxes-loaders")
-require(scripts_path .. "IndustrialRevolution")
-require(scripts_path .. "Squeak_Through")
+--require(scripts_path .. "aircraft")
+--require(scripts_path .. "early-electric-furnaces")
+--require(scripts_path .. "deadlock-beltboxes-loaders")
+--require(scripts_path .. "IndustrialRevolution")
+--require(scripts_path .. "Squeak_Through")
 ---------------------------------------------------------------------------

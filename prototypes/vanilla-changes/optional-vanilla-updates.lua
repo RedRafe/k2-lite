@@ -2,21 +2,13 @@
 -- This script update the base game objects with some adjustment
 
 local modifications = {
-  "long-hands", -- Long hands, obviously
-  "bonus-inventory", -- Bonus inventory space
   "electric-poles-changes", -- Slightly modify electric poles
-  "train-changes", -- Modify trains
-  "vehicles-changes", -- Modify vehicles
-  "radar-changes", -- Modify vanilla radar
-  "fuels-changes", -- Modify vanilla fuels
-  "vehicles-minable-changes", -- Turn off vehicles minable
-  "stack-size-changes", -- Increase stacks size
-  "damage-and-ammo", -- Damage and ammo rebalance
-  "infinite-technology", -- Remove or keep infinite technologies
+  "long-hands", -- Long hands, obviously
+  "more-realistic-weapon",
   "pipes-and-belts-changes", -- Vanilla pipes and belts modification
-  "more-realistic-weapon", -- Add to bullets more realistic range, tragectory, and drop of bullet speed during flight
-  "cargo-wagon-bonus", -- Cargo wagon capacity bonus
-  "finite-oil", -- Makes oil is finite
+  "radar-changes",
+  "stack-size-changes",
+  "vehicles-changes",
 }
 
 -- Application of the modifications

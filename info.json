@@ -1,8 +1,8 @@
 {
-  "name": "Krastorio2",
-  "version": "1.3.24",
-  "title": "Krastorio 2",
-  "description": "An overhaul mod focusing on end-game technologies and moderately increased complexity.",
+  "name": "k2-lite",
+  "version": "0.1.0",
+  "title": "Krastorio 2 Lite",
+  "description": "Extends vanilla Factorio with Krastorio 2 entities",
   "author": "Linver, Krastor, raiguard",
   "contact": "https://github.com/raiguard/Krastorio2/issues",
   "homepage": "https://discord.gg/ECBzaXu",
@@ -45,13 +45,5 @@
     "! bobvehicleequipment >= 0.17.0",
     "! custom_power_armor_fix >= 0.10.0",
     "! laborat >= 0.1.0"
-  ],
-  "package": {
-    "git_publish_branch": "master",
-    "ignore": [ "TODO.md", "crowdin.yml", "images", "stylua.toml", "tests" ],
-    "scripts": {
-      "prepublish": "factorio-crowdin-sync"
-    },
-    "sync_portal_details": true
-  }
+  ]
 }

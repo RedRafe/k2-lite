@@ -1,4 +1,4 @@
-local science_pack_recipe = require("__Krastorio2__/lib/public/data-stages/science-pack-recipe")
+local science_pack_recipe = require(kr_path .. "lib/public/data-stages/science-pack-recipe")
 
 if mods["aai-industry"] then
   -- Automation science pack

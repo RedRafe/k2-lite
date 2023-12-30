@@ -9,7 +9,6 @@ local inserter = require("scripts.inserter")
 local intergalactic_transceiver = require("scripts.intergalactic-transceiver")
 local jackhammer = require("scripts.jackhammer")
 local migrations = require("scripts.migrations")
-local offshore_pump = require("scripts.offshore-pump")
 local patreon = require("scripts.patreon")
 local planetary_teleporter = require("scripts.planetary-teleporter")
 local radioactivity = require("scripts.radioactivity")
@@ -122,8 +121,6 @@ script.on_event({
     shelter.build(entity)
   elseif entity_name == "kr-tesla-coil" then
     tesla_coil.build(entity)
-  elseif entity_name == "offshore-pump" then
-    offshore_pump.build(entity)
   elseif string.match(entity_name, "^kr.*%-loader") then
     snap_loader(entity)
   end
@@ -317,10 +314,7 @@ script.on_event(defines.events.on_player_setup_blueprint, function(e)
   for i = 1, #entities do
     local entity = entities[i]
     local entity_name = entity.name
-    if entity_name == "kr-electric-offshore-pump" then
-      changed_entity = true
-      offshore_pump.setup_blueprint(entity)
-    elseif entity_name == "kr-planetary-teleporter" then
+    if entity_name == "kr-planetary-teleporter" then
       changed_entity = true
       planetary_teleporter.setup_blueprint(entity, mapping[i])
     end

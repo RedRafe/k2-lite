@@ -112,7 +112,6 @@ data:extend({
       usage_priority = "secondary-input",
       emissions_per_minute = 1,
     },
-
     water_reflection = {
       pictures = {
         filename = kr_entities_path .. "stabilizer-charging-station/stabilizer-charging-station-reflection.png",
@@ -126,7 +125,6 @@ data:extend({
       rotate = false,
       orientation_to_variation = false,
     },
-
     energy_usage = "1MW",
     -- ingredient_count = 1,
     result_inventory_size = 1,

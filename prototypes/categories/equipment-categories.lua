@@ -22,11 +22,6 @@ data:extend({
     order = "e-e4",
   },
   -- -- Group
-  -- New universal equipment category (all grids can use this)
-  {
-    type = "equipment-category",
-    name = "universal-equipment",
-  },
   -- New robot interaction equipment for roboport and similar only for entity with inventory
   {
     type = "equipment-category",
@@ -44,13 +39,5 @@ data:extend({
   {
     type = "equipment-category",
     name = "vehicle-motor",
-  },
-  {
-    type = "equipment-category",
-    name = "aircraft-equipment",
-  },
-  {
-    type = "equipment-category",
-    name = "spidertron-only",
   },
 })

@@ -189,8 +189,16 @@ data:extend({
         color = { r = 0, g = 0.917, b = 1 },
       },
     },
-    researching_speed = 1,
-    inputs = {},
+    researching_speed = 2.5,
+    inputs = {
+      "automation-science-pack",
+      "logistic-science-pack",
+      "military-science-pack",
+      "chemical-science-pack",
+      "production-science-pack",
+      "utility-science-pack",
+      "space-science-pack"
+    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {

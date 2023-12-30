@@ -40,3 +40,7 @@ data.raw["inserter"]["long-handed-inserter"].next_upgrade = "kr-superior-long-in
 -- Electric mining drill (MK!)
 data.raw["mining-drill"]["electric-mining-drill"].fast_replaceable_group = "electric-mining-drill"
 data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = "kr-electric-mining-drill-mk2"
+
+-- Pumpjacks
+data.raw['mining-drill']['pumpjack'].fast_replaceable_group = 'pumpjack'
+data.raw['mining-drill']['pumpjack'].next_upgrade = 'kr-mineral-water-pumpjack'

@@ -84,7 +84,7 @@ data:extend({
     order = "z[tank]-b[laser-cannon]",
     attack_parameters = {
       type = "projectile",
-      ammo_category = "impulse-rifle",
+      ammo_category = "cannon-shell",
       damage_modifier = 1.5,
       cooldown = 30,
       movement_slow_down_factor = 0.25,
@@ -106,7 +106,7 @@ data:extend({
     order = "z[tank]-a[cannon-a]",
     attack_parameters = {
       type = "projectile",
-      ammo_category = "railgun-shell",
+      ammo_category = "bullet",
       damage_modifier = 0.5,
       cooldown = 80,
       movement_slow_down_factor = 0.5,
@@ -134,7 +134,7 @@ data:extend({
     order = "z[tank]-a[cannon-b]",
     attack_parameters = {
       type = "projectile",
-      ammo_category = "railgun-shell",
+      ammo_category = "cannon-shell",
       damage_modifier = 0.5,
       cooldown = 80,
       movement_slow_down_factor = 0,
@@ -162,7 +162,7 @@ data:extend({
     order = "z[tank]-a[cannon-c]",
     attack_parameters = {
       type = "projectile",
-      ammo_category = "railgun-shell",
+      ammo_category = "rocket",
       cooldown = 160,
       movement_slow_down_factor = 0,
       projectile_creation_distance = 4.5,

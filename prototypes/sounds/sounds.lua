@@ -1,31 +1,3 @@
-if krastorio.general.getSafeSettingValue("kr-main-menu-song") then
-  data:extend({
-    -- Main Menu
-    {
-      type = "ambient-sound",
-      name = "K2-main-menu",
-      track_type = "menu-track",
-      sound = {
-        filename = "__Krastorio2Assets__/sounds/ambient/K2-main-menu.ogg",
-        volume = 0.6,
-      },
-    },
-    -- Ambient
-    {
-      type = "ambient-sound",
-      name = "K2-ambient",
-      track_type = "main-track",
-      sound = {
-        filename = "__Krastorio2Assets__/sounds/ambient/K2-main-menu.ogg",
-        volume = 0.5,
-      },
-    },
-  })
-
-  -- Remove default menu song
-  data.raw["ambient-sound"]["main-menu"] = nil
-end
-
 data:extend({
   -- -- Scripts
   {
@@ -80,22 +52,6 @@ data:extend({
       count_already_playing = true,
     },
   },
-  --[[
-  {
-    type     = "sound",
-    name     = "kr-intergalactic-transceiver-win-wave",
-    category = "alert",
-    filename = "__Krastorio2Assets__/sounds/others/intergalactic-transceiver-win-wave.ogg",
-    volume   = 0.75,
-    audible_distance_modifier = 0.5,
-    aggregation =
-    {
-      max_count             = 1,
-      remove                = true,
-      count_already_playing = true
-    }
-  },
-  --]]
   {
     type = "sound",
     name = "kr-win-joke-voice",

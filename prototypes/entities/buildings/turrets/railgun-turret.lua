@@ -312,7 +312,7 @@ data:extend({
     vehicle_impact_sound = { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
     attack_parameters = {
       type = "projectile",
-      ammo_category = "railgun-shell",
+      ammo_category = "bullet",
       cooldown = 120,
       projectile_creation_distance = 3.25,
       projectile_center = { 0, 0.15 },

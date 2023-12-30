@@ -99,26 +99,4 @@ data:extend({
     group = "intermediate-products",
     order = "m2",
   },
-  -- Items that in parts use matter
-  {
-    type = "item-subgroup",
-    name = "matter-items",
-    group = "intermediate-products",
-    order = "m3",
-  },
-
-  --
-  {
-    type = "item-group",
-    name = "smelting-crafting",
-    order = "m4",
-    icon = kr_others_path .. "smelting-crafting.png",
-    icon_size = 64,
-  },
-  {
-    type = "item-subgroup",
-    name = "smelting-crafting",
-    group = "smelting-crafting",
-    order = "m4",
-  },
 })

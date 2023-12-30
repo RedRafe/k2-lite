@@ -79,18 +79,6 @@ data:extend({
   },
   {
     type = "tips-and-tricks-item",
-    name = "kr-fuels",
-    order = "e",
-    trigger = {
-      type = "research",
-      technology = "kr-fuel",
-    },
-    category = "kr-about-k2",
-    indent = 1,
-    image = kr_graphic_mod_path .. "gui/tip&tricks/fuels-tip&tricks.png",
-  },
-  {
-    type = "tips-and-tricks-item",
     name = "kr-air-purifier",
     order = "f",
     trigger = {
@@ -195,18 +183,6 @@ data:extend({
     starting_status = "unlocked",
     category = "kr-about-k2",
     indent = 1,
-  },
-  {
-    type = "tips-and-tricks-item",
-    name = "kr-crusher",
-    order = "m",
-    trigger = {
-      type = "research",
-      technology = "kr-crusher",
-    },
-    category = "kr-about-k2",
-    indent = 1,
-    image = kr_graphic_mod_path .. "gui/tip&tricks/crusher-tip&tricks.png",
   },
   {
     type = "tips-and-tricks-item",

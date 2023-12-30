@@ -231,34 +231,6 @@ data:extend({
     stack_size = 20,
   },
   -- -- GENERATORS
-  -- small-portable-generator-equipment
-  {
-    type = "item",
-    name = "small-portable-generator",
-    icons = {
-      { icon = kr_universal_equipments_icons_path .. "small-portable-generator.png", icon_size = 64 },
-      { icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 },
-    },
-    icon_size = 64,
-    placed_as_equipment_result = "small-portable-generator",
-    subgroup = "equipment",
-    order = "a2[energy-source]-a2[small-portable-generator]",
-    stack_size = 10,
-  },
-  -- portable-generator
-  {
-    type = "item",
-    name = "portable-generator",
-    icons = {
-      { icon = kr_universal_equipments_icons_path .. "portable-generator.png", icon_size = 64 },
-      { icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 },
-    },
-    icon_size = 64,
-    placed_as_equipment_result = "portable-generator",
-    subgroup = "equipment",
-    order = "a2[energy-source]-a3[k-generator]",
-    stack_size = 10,
-  },
   -- nuclear-reactor-equipment
   {
     type = "item",
@@ -433,62 +405,6 @@ data:extend({
     placed_as_equipment_result = "personal-laser-defense-mk4-equipment",
     stack_size = 20,
     subgroup = "equipment",
-  },
-  -- personal-submachine-laser-defense-mk1-equipment
-  {
-    type = "item",
-    name = "personal-submachine-laser-defense-mk1-equipment",
-    icons = {
-      { icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk1-equipment.png" },
-      { icon = kr_equipments_tiers_icon_path .. "1.png", icon_size = 64 },
-    },
-    icon_size = 64,
-    placed_as_equipment_result = "personal-submachine-laser-defense-mk1-equipment",
-    subgroup = "equipment",
-    order = "d[active-defense]-a2[personal-laser-defense-mk2-equipment]",
-    stack_size = 10,
-  },
-  -- personal-submachine-laser-defense-mk2-equipment
-  {
-    type = "item",
-    name = "personal-submachine-laser-defense-mk2-equipment",
-    icons = {
-      { icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk2-equipment.png" },
-      { icon = kr_equipments_tiers_icon_path .. "2.png", icon_size = 64 },
-    },
-    icon_size = 64,
-    placed_as_equipment_result = "personal-submachine-laser-defense-mk2-equipment",
-    subgroup = "equipment",
-    order = "d[active-defense]-a3[personal-laser-defense-mk2-equipment]",
-    stack_size = 10,
-  },
-  -- personal-submachine-laser-defense-mk3-equipment
-  {
-    type = "item",
-    name = "personal-submachine-laser-defense-mk3-equipment",
-    icons = {
-      { icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk3-equipment.png" },
-      { icon = kr_equipments_tiers_icon_path .. "3.png", icon_size = 64 },
-    },
-    icon_size = 64,
-    placed_as_equipment_result = "personal-submachine-laser-defense-mk3-equipment",
-    subgroup = "equipment",
-    order = "d[active-defense]-a4[personal-laser-defense-mk3-equipment]",
-    stack_size = 10,
-  },
-  -- personal-submachine-laser-defense-mk4-equipment
-  {
-    type = "item",
-    name = "personal-submachine-laser-defense-mk4-equipment",
-    icons = {
-      { icon = kr_universal_equipments_icons_path .. "personal-submachine-laser-defense-mk4-equipment.png" },
-      { icon = kr_equipments_tiers_icon_path .. "4.png", icon_size = 64 },
-    },
-    icon_size = 64,
-    placed_as_equipment_result = "personal-submachine-laser-defense-mk4-equipment",
-    subgroup = "equipment",
-    order = "d[active-defense]-a5[personal-laser-defense-mk4-equipment]",
-    stack_size = 10,
   },
   -- -- SHIELDS
   -- shield mk3

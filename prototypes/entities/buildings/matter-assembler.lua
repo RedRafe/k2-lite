@@ -214,7 +214,7 @@ data:extend({
         },
       },
     },
-    crafting_categories = { "matter-deconversion", "matter-items" },
+    crafting_categories = { "matter-deconversion" },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {

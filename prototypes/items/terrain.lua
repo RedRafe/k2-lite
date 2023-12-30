@@ -67,7 +67,7 @@ data:extend({
       condition_size = 1,
       condition = { "water-tile" },
     },
-    stack_size = 200,
+    stack_size = 100,
   },
   {
     type = "item",
@@ -82,7 +82,7 @@ data:extend({
       condition_size = 1,
       condition = { "water-tile" },
     },
-    stack_size = 200,
+    stack_size = 100,
   },
 
   -- -- --
