@@ -396,6 +396,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "kr-gas-power-station",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "biomethanol",
+      },
     },
     prerequisites = { "oil-processing", "engine" },
     unit = {
